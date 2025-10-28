@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌐 Web Browser</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">🏠 Umum</a></li>
+            <li><a href="http.html">🔒 HTTP/HTTPS</a></li>
+            <li><a href="domain.html">🏷️ Domain</a></li>
+            <li><a href="hosting.html">🖥️ Hosting</a></li>
+            <li><a href="dns.html">🗺️ DNS</a></li>
+            <li><a href="browser.html" class="active">🌐 Browser</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+
+        <header class="page-header">
+            <h1>🌐 Web Browser</h1>
+            <p>Jendela Ajaib Anda Menuju Dunia Web.</p>
+        </header>
+
+        <section id="browser" class="card">
+            <h2>Penerjemah Kode Menjadi Visual</h2>
+
+            <p><strong>Browser (Web Browser)</strong> seperti Chrome, Firefox, atau Safari, adalah aplikasi perangkat
+                lunak yang bertugas mengambil semua potongan (HTML, CSS, JS, gambar) dan merakitnya menjadi halaman web
+                visual yang bisa Anda lihat dan gunakan.</p>
+
+            <p>Browser BUKAN internet. Ia adalah alat untuk "menerjemahkan" internet. Saat Anda mengunjungi sebuah
+                situs, browser melakukan proses ajaib yang disebut <strong>Critical Rendering Path (Jalur Perenderan
+                    Kritis)</strong>:</p>
+
+            <ol>
+                <li><strong>Mengambil (Fetch):</strong> Browser meminta file `index.html` dari server (menggunakan HTTP
+                    dan IP yang didapat dari DNS).</li>
+                <li><strong>Mem-parsing HTML (DOM):</strong> Browser membaca HTML baris per baris untuk membangun
+                    struktur "pohon" yang disebut <strong>DOM (Document Object Model)</strong>. Ini adalah cetak biru
+                    konten.</li>
+                <li><strong>Mem-parsing CSS (CSSOM):</strong> Saat browser menemukan link CSS, ia mengambil file itu dan
+                    membangun "pohon" lain yang disebut <strong>CSSOM (CSS Object Model)</strong>. Ini adalah cetak biru
+                    *gaya* (warna, ukuran, posisi).</li>
+                <li><strong>Render Tree 🌳:</strong> Browser menggabungkan DOM dan CSSOM untuk membuat <strong>Render
+                        Tree</strong>. Pohon ini hanya berisi apa yang akan *benar-benar* ditampilkan di layar.</li>
+                <li><strong>Tata Letak (Layout):</strong> Browser menghitung dengan tepat di mana setiap elemen harus
+                    ditempatkan (koordinat X/Y) dan seberapa besar ukurannya (lebar/tinggi). Bayangkan seperti menyusun
+                    denah.</li>
+                <li><strong>Melukis (Paint) 🎨:</strong> Akhirnya! Browser mengambil denah tadi dan "melukis"
+                    piksel-piksel ke layar Anda.</li>
+            </ol>
+
+            <p>Dan <strong>JavaScript</strong>? ⚡ Browser memiliki <strong>JavaScript Engine</strong> (seperti V8 di
+                Chrome) untuk menjalankan kode JavaScript. Ini adalah bagian yang membuat website menjadi
+                interaktif—mengklik tombol, memvalidasi formulim, memuat data baru tanpa me-refresh halaman (ini adalah
+                inti dari React!).</p>
+
+            <footer>
+                <p><strong>Sumber Referensi:</strong> Mozilla Developer Network (MDN). (2023). "What is a web browser?".
+                    & Google Developers. (2023). "Critical Rendering Path".</p>
+            </footer>
+        </section>
+
+    </main>
+
+</body>
+
+</html>

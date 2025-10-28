@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔒 HTTP & HTTPS</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">🏠 Umum</a></li>
+            <li><a href="http.html" class="active">🔒 HTTP/HTTPS</a></li>
+            <li><a href="domain.html">🏷️ Domain</a></li>
+            <li><a href="hosting.html">🖥️ Hosting</a></li>
+            <li><a href="dns.html">🗺️ DNS</a></li>
+            <li><a href="browser.html">🌐 Browser</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+
+        <header class="page-header">
+            <h1>🔒 HTTP vs HTTPS</h1>
+            <p>Kenapa ada gembok di browser Anda?</p>
+        </header>
+
+        <section id="http" class="card">
+            <h2>Definisi dan Cara Kerja HTTP & HTTPS</h2>
+
+            <p><strong>HTTP (Hypertext Transfer Protocol)</strong> adalah protokol lapisan aplikasi yang menjadi fondasi
+                komunikasi data di World Wide Web. Anggap saja ini sebagai "bahasa" atau "format pesan" yang disepakati
+                oleh browser (klien) dan server web.</p>
+
+            <p>Cara kerjanya berdasarkan model <strong>request-response</strong> (permintaan-tanggapan):</p>
+            <ol>
+                <li><strong>Request (Permintaan):</strong> Browser Anda mengirim pesan HTTP (HTTP request) ke server
+                    untuk meminta sumber daya. Contohnya, "GET /halaman/kontak.html" yang berarti "Tolong berikan saya
+                    file kontak.html".</li>
+                <li><strong>Response (Tanggapan):</strong> Server memproses permintaan itu dan mengirimkan kembali pesan
+                    HTTP (HTTP response) yang berisi sumber daya yang diminta (misalnya, kode HTML halaman) atau kode
+                    status (seperti "404 Not Found" jika file tidak ada).</li>
+            </ol>
+
+            <p><strong>HTTPS (Hypertext Transfer Protocol Secure)</strong> adalah evolusi dari HTTP. Perbedaan kuncinya
+                adalah <strong>keamanan</strong>. HTTPS menggunakan protokol tambahan yang disebut <strong>SSL/TLS
+                    (Secure Sockets Layer/Transport Layer Security)</strong> untuk mengenkripsi semua komunikasi antara
+                browser Anda dan server.</p>
+            <p>Enkripsi ini mengacak data, sehingga jika ada peretas yang mencoba "menguping" koneksi (misalnya di Wi-Fi
+                publik), mereka hanya akan melihat data acak yang tidak dapat dibaca. HTTPS juga memverifikasi identitas
+                server melalui <strong>Sertifikat SSL/TLS</strong>, yang diwakili oleh ikon gembok di browser Anda. Ini
+                memastikan Anda terhubung ke server yang benar (misalnya, bank Anda) dan bukan ke situs penipu.</p>
+
+            <footer>
+                <p><strong>Sumber Referensi:</strong> Cloudflare. (2023). "What is HTTPS?". & Mozilla Developer Network
+                    (MDN). (2023). "An overview of HTTP".</p>
+            </footer>
+        </section>
+
+    </main>
+
+</body>
+
+</html>

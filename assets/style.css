@@ -1,0 +1,156 @@
+/* === 🌈 Global & Font === */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.7;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    color: #333;
+    margin: 0;
+    padding: 0;
+    padding-top: 80px;
+    /* Ruang untuk navbar */
+}
+
+/* === 🧭 Navbar Keren === */
+.navbar {
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    /* Efek "glass" */
+    border-bottom: 1px solid #ddd;
+    position: fixed;
+    /* Tetap di atas */
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 10px;
+}
+
+.navbar li {
+    margin: 5px 10px;
+}
+
+.navbar a {
+    color: #0056b3;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    display: block;
+}
+
+.navbar a:hover,
+.navbar a:focus {
+    background-color: #007bff;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
+}
+
+/* Ini PENTING untuk menandai halaman yang sedang aktif */
+.navbar a.active {
+    background-color: #003d80;
+    color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 61, 128, 0.3);
+}
+
+
+/* === 🎁 Kontainer Utama & Kartu === */
+.container {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+/* Header di atas kartu */
+.page-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.page-header h1 {
+    font-size: 2.5em;
+    color: #003d80;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    padding: 30px 35px;
+    border-top: 5px solid #007bff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.card h2 {
+    color: #003d80;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 10px;
+    margin-top: 0;
+    font-size: 1.8em;
+}
+
+.card p,
+.card ol {
+    margin-bottom: 15px;
+    font-size: 1.05em;
+}
+
+/* Untuk menaruh gambar/diagram */
+.diagram {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    display: block;
+    border-radius: 8px;
+    background-color: #f4f7f6;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+/* === 📜 Footer Referensi === */
+.card footer {
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+    margin-top: 20px;
+    font-size: 0.9em;
+    font-style: italic;
+    color: #555;
+}
+
+/* === ✨ Simbol & Dekorasi "lalalala" ✨ === */
+.card h2::before {
+    content: '✨ ';
+    margin-right: 5px;
+}
+
+.card footer::before {
+    content: '📚 ';
+}
+
+.card ol li {
+    padding-left: 5px;
+    margin-bottom: 10px;
+}

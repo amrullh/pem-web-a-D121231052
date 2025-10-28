@@ -4,24 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cara Kerja Internet - Proyek Statis</title>
-    <link rel="stylesheet" href="style.css">
+    <title>🏠 Cara Kerja Internet - Halaman Utama</title>
+    <link rel="stylesheet" href="assets/style.css">
 </head>
 
 <body>
 
     <nav class="navbar">
         <ul>
-            <li><a href="#home">Umum</a></li>
-            <li><a href="#http">HTTP/HTTPS</a></li>
-            <li><a href="#domain">Domain</a></li>
-            <li><a href="#hosting">Hosting</a></li>
-            <li><a href="#dns">DNS</a></li>
-            <li><a href="#browser">Browser</a></li>
+            <li><a href="index.html" class="active">🏠 Umum</a></li>
+            <li><a href="http.html">🔒 HTTP/HTTPS</a></li>
+            <li><a href="domain.html">🏷️ Domain</a></li>
+            <li><a href="hosting.html">🖥️ Hosting</a></li>
+            <li><a href="dns.html">🗺️ DNS</a></li>
+            <li><a href="browser.html">🌐 Browser</a></li>
         </ul>
     </nav>
 
     <main class="container">
+
+        <header class="page-header">
+            <h1>🌐 Selamat Datang di Dunia Web!</h1>
+            <p></p>
+        </header>
 
         <section id="home" class="card">
             <h2>Bagaimana Internet Bekerja Secara Umum?</h2>
@@ -50,153 +55,6 @@
             <footer>
                 <p><strong>Sumber Referensi:</strong> Mozilla Developer Network (MDN). (2023). "How the Internet works".
                     & GeeksforGeeks. (2023). "TCP/IP Model".</p>
-            </footer>
-        </section>
-
-        <section id="http" class="card">
-            <h2>Definisi dan Cara Kerja HTTP & HTTPS</h2>
-
-            <p><strong>HTTP (Hypertext Transfer Protocol)</strong> adalah protokol lapisan aplikasi yang menjadi fondasi
-                komunikasi data di World Wide Web. Anggap saja ini sebagai "bahasa" atau "format pesan" yang disepakati
-                oleh browser (klien) dan server web.</p>
-            <p>Cara kerjanya berdasarkan model <strong>request-response</strong> (permintaan-tanggapan):</p>
-            <ol>
-                <li><strong>Request (Permintaan):</strong> Browser Anda mengirim pesan HTTP (HTTP request) ke server
-                    untuk meminta sumber daya. Contohnya, "GET /halaman/kontak.html" yang berarti "Tolong berikan saya
-                    file kontak.html".</li>
-                <li><strong>Response (Tanggapan):</strong> Server memproses permintaan itu dan mengirimkan kembali pesan
-                    HTTP (HTTP response) yang berisi sumber daya yang diminta (misalnya, kode HTML halaman) atau kode
-                    status (seperti "404 Not Found" jika file tidak ada).</li>
-            </ol>
-            <p><strong>HTTPS (Hypertext Transfer Protocol Secure)</strong> adalah evolusi dari HTTP. Perbedaan kuncinya
-                adalah <strong>keamanan</strong>. HTTPS menggunakan protokol tambahan yang disebut <strong>SSL/TLS
-                    (Secure Sockets Layer/Transport Layer Security)</strong> untuk mengenkripsi semua komunikasi antara
-                browser Anda dan server.</p>
-            <p>Enkripsi ini mengacak data, sehingga jika ada peretas yang mencoba "menguping" koneksi (misalnya di Wi-Fi
-                publik), mereka hanya akan melihat data acak yang tidak dapat dibaca. HTTPS juga memverifikasi identitas
-                server melalui <strong>Sertifikat SSL/TLS</strong>, yang diwakili oleh ikon gembok di browser Anda. Ini
-                memastikan Anda terhubung ke server yang benar (misalnya, bank Anda) dan bukan ke situs penipu.</p>
-            <footer>
-                <p><strong>Sumber Referensi:</strong> Cloudflare. (2023). "What is HTTPS?". & Mozilla Developer Network
-                    (MDN). (2023). "An overview of HTTP".</p>
-            </footer>
-        </section>
-
-        <section id="domain" class="card">
-            <h2>Definisi dan Cara Kerja Nama Domain</h2>
-            <p><strong>Nama Domain (Domain Name)</strong> adalah alamat yang mudah diingat yang digunakan manusia untuk
-                mengidentifikasi lokasi di internet, seperti `google.com` atau `detik.com`. Ini adalah pengganti yang
-                ramah pengguna untuk <strong>Alamat IP (IP Address)</strong>.</p>
-            <p>Komputer dan server di internet tidak saling menemukan menggunakan nama; mereka menggunakan string
-                numerik yang disebut Alamat IP (misalnya, `142.250.190.78`). Akan sangat sulit bagi manusia untuk
-                mengingat ribuan alamat IP. Nama domain memecahkan masalah ini. Ini berfungsi persis seperti "nama
-                kontak" di ponsel Anda. Anda tidak perlu menghafal nomor telepon, Anda cukup menyimpan "Ibu" atau
-                "Budi", dan ponsel Anda yang akan menerjemahkan nama itu ke nomor yang benar saat Anda menelepon.</p>
-            <p>Nama domain memiliki struktur hierarkis. Misalnya, pada `www.google.com`:</p>
-
-            <p><strong>.com:</strong> Ini adalah <strong>Top-Level Domain (TLD)</strong>. Ada banyak TLD lain seperti
-                .org, .net, .id (khusus negara), atau .tech.</p>
-            <p><strong>google:</strong> Ini adalah <strong>Second-Level Domain (SLD)</strong>. Ini adalah bagian unik
-                yang biasanya Anda beli atau daftarkan.</p>
-            <p><strong>www:</strong> Ini adalah <strong>subdomain</strong>.</p>
-
-            <p>Organisasi global bernama <strong>ICANN (Internet Corporation for Assigned Names and Numbers)</strong>
-                mengoordinasikan sistem nama domain ini untuk memastikan setiap alamat unik dan terpetakan dengan benar.
-            </p>
-            <footer>
-                <p><strong>Sumber Referensi:</strong> ICANN (Internet Corporation for Assigned Names and Numbers).
-                    (2023). "What's a Domain Name?". & Cloudflare. (2023). "What is a Domain Name?".</p>
-            </footer>
-        </section>
-
-        <section id="hosting" class="card">
-            <h2>Definisi dan Cara Kerja Hosting</h2>
-
-            <p><strong>Hosting (Web Hosting)</strong> adalah layanan yang menyediakan ruang penyimpanan (storage) dan
-                sumber daya komputasi di server agar website Anda dapat diakses oleh siapa saja di internet, kapan saja.
-            </p>
-            <p>Jika nama domain adalah "alamat" unik rumah Anda, maka hosting adalah "tanah dan bangunan" tempat Anda
-                menyimpan semua perabotan. "Perabotan" ini adalah file-file website Anda: file `index.html`,
-                `style.css`, file JavaScript, gambar, video, dan database.</p>
-            <p>Server hosting pada dasarnya adalah komputer berkinerja tinggi yang selalu menyala (24/7) dan terhubung
-                ke internet dengan koneksi berkecepatan sangat tinggi. Ketika seseorang mengetik nama domain Anda di
-                browser, browser tersebut akan diarahkan ke server hosting ini. Server kemudian akan "menyajikan" atau
-                mengirimkan file-file website Anda ke browser pengunjung, yang kemudian menampilkannya sebagai halaman
-                web.</p>
-            <p>Ada berbagai jenis hosting, mulai dari <strong>Shared Hosting</strong> (paling murah, seperti berbagi
-                apartemen dengan banyak orang), <strong>VPS (Virtual Private Server)</strong> (lebih terkontrol, seperti
-                unit kondominium), hingga <strong>Dedicated Server</strong> (paling mahal, seperti memiliki seluruh
-                gedung sendiri).</p>
-            <footer>
-                <p><strong>Sumber Referensi:</strong> DigitalOcean. (2023). "What is Web Hosting?". & Hostinger. (2023).
-                    "What Is Web Hosting Explained: A Beginner’s Guide".</p>
-            </footer>
-        </section>
-
-        <section id="dns" class="card">
-            <h2>Definisi dan Cara Kerja DNS</h2>
-
-            <p><strong>DNS (Domain Name System)</strong> adalah sistem terdistribusi global yang berfungsi sebagai "buku
-                telepon internet". Peran utamanya adalah menerjemahkan Nama Domain yang mudah dibaca manusia (seperti
-                `google.com`) menjadi Alamat IP yang dimengerti mesin (seperti `142.250.190.78`).</p>
-            <p>Proses ini disebut <strong>"Resolusi DNS"</strong> dan terjadi sangat cepat di latar belakang setiap kali
-                Anda mengunjungi situs web. Berikut adalah langkah-langkah yang disederhanakan:</p>
-            <ol>
-                <li><strong>Permintaan Awal:</strong> Anda mengetik `google.com` di browser. Browser Anda akan bertanya
-                    ke <strong>DNS Resolver</strong> (biasanya disediakan oleh ISP Anda), "Apa IP untuk `google.com`?"
-                </li>
-                <li><strong>Query ke Root Server:</strong> Jika Resolver tidak tahu (tidak ada di <i>cache</i>), ia akan
-                    bertanya ke <strong>Root Server</strong> (server puncak). Root Server akan berkata, "Saya tidak
-                    tahu, tapi saya tahu siapa yang mengurus `.com`. Tanyakan pada mereka."</li>
-                <li><strong>Query ke TLD Server:</strong> Resolver kemudian bertanya ke <strong>TLD Server</strong>
-                    (server untuk `.com`). TLD Server menjawab, "Saya tidak tahu IP pastinya, tapi saya tahu server mana
-                    yang bertanggung jawab atas domain `google.com`. Tanyakan pada <strong>Authoritative
-                        Nameserver</strong> mereka."</li>
-                <li><strong>Jawaban dari Authoritative Server:</strong> Akhirnya, Resolver bertanya ke
-                    <strong>Authoritative Nameserver</strong> (yang dikelola oleh Google). Server ini memegang catatan
-                    resmi dan menjawab, "Ya, IP untuk `google.com` adalah `142.250.190.78`."</li>
-                <li><strong>Resolusi:</strong> Resolver memberikan jawaban IP ini kembali ke browser Anda. Agar efisien,
-                    Resolver juga menyimpan jawaban ini di <i>cache</i> untuk sementara, sehingga jika Anda bertanya
-                    lagi nanti, prosesnya bisa dilewati.</li>
-            </ol>
-            <footer>
-                <p><strong>Sumber Referensi:</strong> Cloudflare. (2023). "What is DNS?". & AWS (Amazon Web Services).
-                    (2023). "What Is DNS?".</p>
-            </footer>
-        </section>
-
-        <section id="browser" class="card">
-            <h2>Definisi dan Cara Kerja Browser</h2>
-            <p><strong>Browser (Web Browser)</strong> adalah aplikasi perangkat lunak yang diinstal di perangkat Anda
-                (seperti Chrome, Firefox, Safari) yang memiliki satu tugas utama: mengambil sumber daya dari web dan
-                menampilkannya kepada pengguna.</p>
-            <p>Browser bukanlah internet itu sendiri; ia adalah alat untuk mengakses dan "menerjemahkan" internet. Saat
-                Anda memasukkan URL, browser melakukan serangkaian langkah yang kompleks yang disebut <strong>Critical
-                    Rendering Path (Jalur Perenderan Kritis)</strong>:</p>
-            <ol>
-                <li><strong>Mengambil (Fetch):</strong> Menggunakan DNS untuk menemukan IP server, lalu mengirimkan
-                    permintaan HTTP/HTTPS ke server tersebut untuk meminta file (terutama file HTML).</li>
-                <li><strong>Mem-parsing (Parse):</strong> Setelah file HTML diterima, mesin perender (rendering engine)
-                    browser (seperti Blink di Chrome) akan memindai dan mem-parsing kode HTML untuk membangun struktur
-                    yang disebut <strong>DOM (Document Object Model) Tree</strong>. Ini adalah representasi internal
-                    halaman dalam bentuk pohon objek.</li>
-                <li><strong>Membangun CSSOM:</strong> Browser juga akan menemukan link ke file CSS. Ia akan mengambil
-                    dan mem-parsing file CSS untuk membangun <strong>CSSOM (CSS Object Model) Tree</strong>, yang berisi
-                    semua informasi gaya (style) untuk setiap elemen.</li>
-                <li><strong>Render Tree:</strong> Browser kemudian menggabungkan DOM dan CSSOM untuk membuat
-                    <strong>Render Tree</strong>. Pohon ini hanya berisi elemen-elemen yang akan ditampilkan secara
-                    visual di layar.</li>
-                <li><strong>Tata Letak (Layout):</strong> Browser menghitung dengan tepat di mana setiap elemen harus
-                    ditempatkan di layar (koordinat X/Y) dan berapa ukurannya (lebar/tinggi).</li>
-                <li><strong>Melukis (Paint):</strong> Akhirnya, browser "melukis" atau merasterisasi piksel-piksel ke
-                    layar, mengubah elemen-elemen abstrak dari Render Tree menjadi gambar visual yang Anda lihat.</li>
-            </ol>
-            <p>Selain itu, browser juga memiliki <strong>JavaScript Engine</strong> (seperti V8 di Chrome) untuk
-                menjalankan kode JavaScript, yang memungkinkan halaman web menjadi interaktif (seperti slider, pop-up,
-                atau game).</p>
-            <footer>
-                <p><strong>Sumber Referensi:</strong> Mozilla Developer Network (MDN). (2023). "What is a web browser?".
-                    & Google Developers. (2023). "Critical Rendering Path".</p>
             </footer>
         </section>
 

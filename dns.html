@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🗺️ DNS (Domain Name System)</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">🏠 Umum</a></li>
+            <li><a href="http.html">🔒 HTTP/HTTPS</a></li>
+            <li><a href="domain.html">🏷️ Domain</a></li>
+            <li><a href="hosting.html">🖥️ Hosting</a></li>
+            <li><a href="dns.html" class="active">🗺️ DNS</a></li>
+            <li><a href="browser.html">🌐 Browser</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+
+        <header class="page-header">
+            <h1>🗺️ DNS (Domain Name System)</h1>
+            <p>Buku Telepon Raksasa Milik Internet.</p>
+        </header>
+
+        <section id="dns" class="card">
+            <h2>Menerjemahkan Nama Menjadi Angka</h2>
+
+            <p><strong>DNS (Domain Name System)</strong> adalah sistem terdistribusi global yang berfungsi sebagai "buku
+                telepon internet". 📖 Tadi kita tahu bahwa domain adalah "nama kontak" dan server punya "nomor telepon"
+                (Alamat IP).</p>
+
+            <p>Nah, DNS adalah layanan yang mencari tahu "nomor" siapa saat Anda mengetik "nama".</p>
+
+            <p>Proses ini disebut <strong>"Resolusi DNS"</strong>. Ini terjadi sangat cepat di latar belakang. Begini
+                alurnya:</p>
+
+            <ol>
+                <li><strong>Permintaan Awal:</strong> Anda mengetik `google.com` di browser. Browser Anda bertanya ke
+                    <strong>DNS Resolver</strong> (biasanya dari ISP Anda), "Bro, IP-nya `google.com` berapa?"</li>
+                <li><strong>Query ke Root Server 🌍:</strong> Resolver (jika tidak tahu) bertanya ke <strong>Root
+                        Server</strong>. Root Server tidak tahu, tapi dia bilang, "Coba tanya server `.com`."</li>
+                <li><strong>Query ke TLD Server (.com) 🏷️:</strong> Resolver bertanya ke <strong>TLD Server</strong>
+                    (server `.com`). Server ini juga tidak tahu, tapi dia bilang, "Oh, `google.com`? Tuh tanya ke
+                    servernya Google langsung (Authoritative Nameserver)."</li>
+                <li><strong>Jawaban dari Authoritative Server 🎯:</strong> Resolver bertanya ke <strong>Authoritative
+                        Nameserver</strong> Google. Server ini memegang catatan resmi dan menjawab, "Yoi, IP-nya
+                    `172.217.14.228`."</li>
+                <li><strong>Resolusi:</strong> Resolver memberikan IP itu ke browser Anda. Browser Anda sekarang tahu
+                    "nomor telepon" server Google dan bisa menghubunginya.</li>
+            </ol>
+
+            <p>Untungnya, ada <strong>Caching</strong>! Resolver Anda akan "mengingat" jawaban itu. Jadi, jika teman
+                Anda juga membuka `google.com`, proses 1-5 ini tidak perlu diulang. Resolver langsung memberikan jawaban
+                yang sudah disimpan. Cepat!</p>
+
+            <footer>
+                <p><strong>Sumber Referensi:</strong> Cloudflare. (2023). "What is DNS?". & AWS (Amazon Web Services).
+                    (2023). "What Is DNS?".</p>
+            </footer>
+        </section>
+
+    </main>
+
+</body>
+
+</html>
